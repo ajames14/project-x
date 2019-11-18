@@ -1,1 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Tomorrow');
 
+body {
+  font-family: 'Tomorrow', sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+// Typography
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+a {
+  color: #141414;
+  text-decoration: none!important;
+}
+
+// Header
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 40px;
+  background-color: #141414;
+  transition: background-color 0.2s ease;
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        float: right;
+        margin-left: 20px;
+        line-height: 40px;
+        &:last-of-type {
+          margin-left: 0;
+        }
+        a {
+          color: white;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+          }
+          &:hover {
+            color: white;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sections
+
+section {
+  text-align: center;
+  h2 {
+    font-size: 30px;
+  }
+  .container {
+    padding-bottom: 120px;
+    position: relative;
+    border-bottom: 2px solid silver;
+  }
+  &:last-of-type {
+    .container {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+#hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://mars.nasa.gov/system/resources/detail_files/7505_mars-curiosity-rover-gale-crater-beauty-shot-pia19839-full2.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  h1 {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
+
+#most-recent-sol {
+  font-weight: bold;
+  color: rgb(46, 45, 45);
+  font-size: 25px;
+}
+#weather-snapshot {
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+// #weather-snapshot div {
+//   padding: 10px 0px;
+// }
+
+#temp-box{
+  border: 1px solid lightgrey;
+  margin: 20px;
+  width: 250px;
+}
+
+#air-temp {
+  background-color: rgb(46, 45, 45);
+  color: white;
+  margin: 0px;
+  font-weight: bold;
+
+}
+
+#temp-box div {
+  padding: 5px;
+}
+
+#flex-box {
+  display: flex; 
+  justify-content: center;
+}
+
+.info {
+  margin: 5px 0px;
+}
+
+img {
+  width: 300px;
+  margin: 20px;
+}
+
+footer {
+  background-color: #141414;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+p {
+  padding: 5px;
+}
